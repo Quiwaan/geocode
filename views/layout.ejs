@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mapbox Eample</title>
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position: static; margin: 20px; width: 70%; auto; }
+    </style>
+</head>
+<body>
+	<nav>
+	    <div class="nav-wrapper">
+	      <a href="/" class="brand-logo">Geo Code</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><a href="/">Home</a></li>
+	        <li><a href="/favorites">Favorites</a></li>
+	        <li><a href="/search-results">Results</a></li>
+	         <li><a href="/travelers">Travelers</a></li>
+	      </ul>
+	    </div>
+	</nav>
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>	
+<%- body %>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  }); 
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

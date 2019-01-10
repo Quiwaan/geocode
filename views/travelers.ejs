@@ -1,0 +1,14 @@
+<h1>Travelers</h1>
+
+<form method="POST" action="/Travelers">
+<input type="text" name="firstname">
+<input type="text" name="lastname">
+<input type="submit" value="Add Traveler">
+</form>
+<ol>
+	<h4>Travelers</h4>
+<% travelers.forEach(function(traveler) { %>
+	<li><a href="/traveler/<%=traveler.id %>"><%= traveler.firstname %> <%= traveler.lastname %> </li></a>
+
+<% }) %>
+</ol>

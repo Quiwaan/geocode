@@ -1,0 +1,16 @@
+<h1>Hello from City Search</h1>
+
+<form method="GET" action="/results">
+	<label name="city">City:</label>
+	<input type="text" name="city">
+	<label name="state">State:</label>
+	<input type="text" name="state">
+	<select name="travelerId">
+		<option value="" disabled selected>Choose your Traveler</option>
+		<%travelers.forEach(function(traveler){ %>
+			<option value="<%= traveler.id %>"><%= traveler.firstname %> <%= traveler.lastname %></option>
+		<% }) %>
+		
+	</select>
+	<input type="submit" value="Search">
+</form>

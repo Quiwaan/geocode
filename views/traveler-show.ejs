@@ -1,0 +1,18 @@
+<h1><%=traveler.firstname %> Has been to all these cool places! </h1>
+
+<ul>
+<% places.forEach(function(place){ %>
+	<li><%= place.city %>, <%= place.state %>: (<%= place.lat %>, <%= place.long %>)</li>
+
+</ul>
+<form method="POST" action="/association?_method=DELETE">
+	<input type="hidden" name="placeId" value="<%= place.id %>">
+	<input type="hidden" name="travelerId" value="<%= traveler.id %>">
+	<input type="submit" value="Delete from Travels">
+	
+</form>
+
+<% }) %>
+
+<% include ./map.ejs %>
+
